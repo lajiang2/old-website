@@ -1,0 +1,28 @@
+---
+layout: portfolio
+title: portfolio
+permalink: "/portfolio/"
+---
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<link rel="stylesheet" href="../assets/css/main.css"/>
+
+ <!-- Header -->
+    <header id="header">
+        <h1><a href="index.html"><strong>photography</strong><br>by Lawrence Jiang</a></h1>
+    </header>
+
+<!-- Wrapper -->
+<div id="wrapper">
+    <!-- Main -->
+    <div id="main">
+        {% for image in site.static_files %}
+            {% if image.path contains 'fulls' %}
+                <article class="thumb">
+                    <a href="/images/fulls/{{ image.name }}" class="image">
+                    <img src="/images/fulls/{{ image.name }}" alt="" data-name="{{ image.name }}"/></a>
+                </article>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

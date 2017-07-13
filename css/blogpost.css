@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Palanquin');
+/* CSS Document */
+
+p {
+	font-family: Palanquin;
+	letter-spacing: 0.8px;
+	line-height: 25px;
+	font-size: 14px;
+}
