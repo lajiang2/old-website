@@ -6,7 +6,7 @@
   border: 1px solid rgba(0, 0, 0, 0.3);
 }*/
 
-html{
+html {
 	max-width: 100%;
 	box-sizing: border-box;
 	font-family: Palanquin, Helvetica Neue, Helvetica, Arial," sans-serif";
@@ -39,7 +39,7 @@ a {
     position:relative;
     display:inline-block;
     text-align:center;
-	margin-bottom: 100px;
+	margin-bottom: 20px;
 }
 
 .about-overlay {
@@ -88,8 +88,6 @@ img.tile:hover {
 	transition: all 0.3s ease-in-out;
 }
 
-
-
 .about {
 	margin-left: 5%;
 	margin-bottom: 30px;
@@ -99,6 +97,17 @@ img.tile:hover {
 
 .description {
 	margin-left: 7%;
+	margin-right: 7%;
 	color: #484848;
 	line-height: 200%;
+}
+
+.centered {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    letter-spacing: 20px;
+    color: #F0FFFF;
 }
