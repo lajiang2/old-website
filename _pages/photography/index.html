@@ -1,28 +1,45 @@
 ---
-layout: portfolio
-title: portfolio
-permalink: "/portfolio/"
+layout: page
+title: photography
+permalink: "/photography/"
 ---
 
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-<link rel="stylesheet" href="../assets/css/main.css"/>
+<!doctype html>
+<html>
 
- <!-- Header -->
-    <header id="header">
-        <h1><a href="index.html"><strong>photography</strong><br>by Lawrence Jiang</a></h1>
-    </header>
+<link rel="stylesheet" href="/css/index.css">
 
-<!-- Wrapper -->
-<div id="wrapper">
-    <!-- Main -->
-    <div id="main">
-        {% for image in site.static_files %}
-            {% if image.path contains 'fulls' %}
-                <article class="thumb">
-                    <a href="/images/fulls/{{ image.name }}" class="image">
-                    <img src="/images/tns/{{ image.name }}" alt="" data-name="{{ image.name }}"/></a>
-                </article>
-            {% endif %}
-        {% endfor %}
+<body>
+    <div class="img_container">
+        <img class="img-responsive" src="/images/photography.png"/>
+        <div class="photography-title"> photography </div>
     </div>
-</div>
+    
+    <div class="about">
+        <h1>
+            the journey
+        </h1>
+    </div>
+    <div class="description">
+        <p>
+            Photography is a relatively new hobby of mine. Ever since I was a teenager, I wanted a way to document my life and save my memories, and after experimenting with writing and vlogging, I decided that photography was best for me. <br>
+            <br>
+            My first real exposure to anything more than iPhone photography was at my senior prom. Naturally, we all wanted nice pictures to remember the night so we hired a professional photographer for the event. The pictures turned out amazing, and I was inspired. Our photographer captured the moment with all of our emotions in one perfect album, and every time I look at it it brings me back to that evening. <br>
+            <br>
+            Having the ability to save memories like that is magical, and what that photographer gave to me, I wanted to give to others. The beginning of sophomore year in college, I picked up my first DSLR, a used Canon Rebel T2i off of eBay. This was right before my trip to South Korea with my housemates at the time, and I saw it as the perfect opportunity to start learning photography. <br>
+            <br>
+            Although I did take tons of photos, using the camera was a lot more difficult than I thought. Sadly, I became discouraged. I continued to shoot every now and then, but my dreams of becoming that magical photographer faded. As for the photos, I saved them on my hard drive and set them aside. <br>
+            <br>
+            Fast forward to second semester junior year, and I'm headed to Europe to study abroad. I knew for sure that I wanted to document these few months, and that was just the motivation I needed to pick up the camera again. I watched YouTube videos and practiced shooting with friends in San Francisco, and I saw the improvement. <br>
+            <br>
+            However, I came upon another realization: that taking the photos is only a fraction of it, and I completely forgot about the editing part. I downloaded Adobe Lightroom and Photoshop and spent weeks in the library learning how to use it, from online to tutorials or experimenting with my own photos. At the end of it, I was finally able to bring my photos to life, giving me the confidence boost I needed for the next step: sharing the photos. <br>
+            <br>
+            Now satisfied with my shots, I made a SmugMug account to share my photos. I finally picked up my hard drive and went through all of my photo albums, starting with South Korea. After sharing that album with the housemates I travelled to South Korea with and receiving their positive feedback, I now proudly display all my photos on my photography website. <br>
+            <br>
+            Click <a href="https://www.lawrencejiang.smugmug.com">here</a> to check it out!<br>
+            <br>
+        </p>
+    </div>
+    
+</body>
+</html>
