@@ -7,7 +7,10 @@ permalink: "/photography/"
 <!doctype html>
 <html>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="/css/index.css">
+<link rel="stylesheet" href="/css/slideshow.css">
 
 <body>
     <div class="img_container">
@@ -34,12 +37,111 @@ permalink: "/photography/"
             <br>
             However, I came upon another realization: that taking the photos is only a fraction of it, and I completely forgot about the editing part. I downloaded Adobe Lightroom and Photoshop and spent weeks in the library learning how to use it, from online to tutorials or experimenting with my own photos. At the end of it, I was finally able to bring my photos to life, giving me the confidence boost I needed for the next step: sharing the photos. <br>
             <br>
-            Now satisfied with my shots, I made a SmugMug account to share my photos. I finally picked up my hard drive and went through all of my photo albums, starting with South Korea. After sharing that album with the housemates I travelled to South Korea with and receiving their positive feedback, I now proudly display all my photos on my photography website. <br>
+            Now satisfied with my shots, I made a SmugMug account to share my photos. I finally picked up my hard drive and went through all of my photo albums, starting with South Korea. After sharing that album with the housemates I travelled to South Korea with and receiving their positive feedback, I now proudly display all my photos on my photography website. Click <a href="https://www.lawrencejiang.smugmug.com">here</a> to check it out!<br>
             <br>
-            Click <a href="https://www.lawrencejiang.smugmug.com">here</a> to check it out!<br>
+            Below are some photos from my latest shoots. <br>
             <br>
         </p>
     </div>
-    
-</body>
-</html>
+
+    <!-- Container for the image gallery -->
+    <div class="container">
+
+      <!-- Full-width images with number text -->
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+          <img src="/images/slideshow/northern-lights.jpg" style="height:75%" class="center">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+          <img src="/images/slideshow/stockholm.jpg" style="height:75%" class="center">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+          <img src="/images/slideshow/imagine-dragons.jpg" style="height:75%" class="center">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+          <img src="/images/slideshow/st-petersburg.jpg" style="height:75%" class="center">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+          <img src="/images/slideshow/baltic-cruise.jpg" style="height:75%" class="center">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+          <img src="/images/slideshow/purple-flower.jpg" style="height:75%" class="center">
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <!-- Image text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <!-- Thumbnail images -->
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="/images/slideshow/northern-lights.jpg" style="width:100%" onclick="currentSlide(1)" alt="Northern Lights">
+        </div>
+        <div class="column"> 
+          <img class="demo cursor" src="/images/slideshow/stockholm.jpg" style="width:100%" onclick="currentSlide(2)" alt="Stockholm, Sweden">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/images/slideshow/imagine-dragons.jpg" style="width:100%" onclick="currentSlide(3)" alt="Imagine Dragons, O2 Arena">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/images/slideshow/st-petersburg.jpg" style="width:100%" onclick="currentSlide(4)" alt="St. Petersburg, Russia">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/images/slideshow/baltic-cruise.jpg" style="width:100%" onclick="currentSlide(5)" alt="Safe at Sea">
+        </div> 
+        <div class="column">
+          <img class="demo cursor" src="/images/slideshow/purple-flower.jpg" style="width:100%" onclick="currentSlide(6)" alt="Color of Life">
+        </div>
+      </div>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    </script>
+
+  </body>
+  </html>
